@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'shared-header',
@@ -6,6 +6,20 @@ import { Component } from '@angular/core';
   styles: ``
 })
 
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
+  showFiller = false;
+  public sidebarItems: any = [{
+    url: '/cli-test',
+    icon: '',
+    label: 'cli test'
+  }, {
+    url: '/admin-pro',
+    icon: '',
+    label: 'Admin pro'
+  }];
 
+  ngOnInit(): void {
+
+  }
 }
+

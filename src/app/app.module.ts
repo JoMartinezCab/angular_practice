@@ -9,20 +9,22 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
  * Projectos Angular adv
  */
 import { CoreModule as CliTestModule } from '@app/01-cli-test/core/core.module';
+import { CoreModule as AdminProModule } from '@app/02-admin-pro/core/core.module';
 import { SharedModule } from './shared/shared.module';
-import { AuthComponent } from './02-admin-pro/module/components/auth/auth.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    AuthComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    CliTestModule,
-    SharedModule,
+    BrowserAnimationsModule,
+
     AppRoutingModule,
-    BrowserAnimationsModule
+
+    SharedModule,
+    CliTestModule,
+    AdminProModule
   ],
   providers: [],
   bootstrap: [AppComponent]
